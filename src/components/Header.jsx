@@ -9,7 +9,7 @@ const Header = () => {
   ];
 
   const activeStyle = "text-purple-800 border-b-2 border-purple-500 font-semibold text-lg font-semibold";
-  const defaultStyle = "text-black hover:text-white transition duration-300 text-md";
+  const defaultStyle = "text-black hover:text-red-500 transition duration-300 text-md";
 
   return (
     <header className="bg-[#ffffff] shadow-md border border-gray-200">
@@ -41,7 +41,7 @@ const Header = () => {
           rel="noopener noreferrer" 
           className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center space-x-2"
         >
-          <img src="/src/assets/contribute.jpg" alt="" className='w-[20px] h-[20px] rounded-2xl' /> <span>Contribute</span>
+          <img src="/src/assets/fi_2111432.png" alt="" className='w-[20px] h-[20px] rounded-2xl' /> <span>Contribute</span>
         </a>
       </div>
     </header>

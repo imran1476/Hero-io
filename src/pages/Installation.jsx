@@ -30,15 +30,16 @@ const Installation = () => {
   };
   
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-white min-h-[70vh]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8   min-h-[70vh]">
       <ToastContainer />
-      <h1 className="text-4xl font-bold text-center text-white mb-2">Your Installed Apps</h1>
+      <h1 className="text-4xl font-bold text-center text-[#001931]mb-2">Your Installed Apps</h1> <br />
       <p className="text-center text-gray-400 mb-8">Explore All Trending Apps on the Market developed by us.</p>
 
       <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
         <p className="text-gray-300 mb-4">
             <span className="font-bold text-purple-400">{installedApps.length}</span> Apps Found
         </p>
+        
         
         {installedApps.length === 0 ? (
           <div className="text-center py-10">

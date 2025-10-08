@@ -8,14 +8,14 @@ const NotFound = () => {
 
   return (
     // Figma-এর Error-404 ডিজাইন অনুযায়ী
-    <div className="text-center py-20 min-h-[70vh] flex flex-col items-center justify-center">
+    <div className="text-center py-10 min-h-[70vh] flex flex-col items-center justify-center">
       <div className="max-w-md mx-auto">
         <h1 className="text-4xl font-extrabold text-white mb-8">Error-404</h1>
         
         {/* Illustration (Figma অনুযায়ী) */}
         {/* এই ইমেজটি আপনার 'assets' ফোল্ডারে রাখুন এবং পথটি সঠিক করুন */}
         <img 
-          src="/assets/error-404-illustration.svg" 
+          src="/src/assets/error-404.png" 
           alt="Page Not Found Illustration" 
           className="w-full h-auto mb-8"
         />

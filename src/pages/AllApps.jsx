@@ -52,7 +52,7 @@ const AllApps = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       
       {/* Title Section (Figma অনুযায়ী) */}
-      <h1 className="text-4xl font-bold text-center text-white mt-4">Our All Applications</h1>
+      <h1 className="text-4xl font-bold text-center text-[#001931] mt-4 mb-4">Our All Applications</h1>
       <p className="text-center text-gray-400 mb-8">
         Explore All Apps on the Market developed by us. We code for Millions
       </p>
@@ -61,7 +61,7 @@ const AllApps = () => {
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
         
         {/* Total Apps Found */}
-        <p className="text-gray-300">
+        <p className="text-gray-500">
           <span className="font-bold text-lg">({filteredAndSortedApps.length})</span> Apps Found
         </p>
 
@@ -80,7 +80,7 @@ const AllApps = () => {
         
         {/* Sort Dropdown */}
         <div className="flex items-center space-x-2">
-            <label htmlFor="sort" className="text-gray-300 hidden sm:block">Sort By:</label>
+            <label htmlFor="sort" className="text-gray-500 hidden sm:block text-lg">Sort By:</label>
             <select
               id="sort"
               value={sortBy}
@@ -103,6 +103,7 @@ const AllApps = () => {
       ) : (
         // No App Found Message
         <div className="text-center py-16 bg-gray-800 rounded-lg mt-10">
+          <img src="/src/assets/App-Error.png" alt="" className='w-[150px] h-[150px] rounded-2xl mx-auto'/>
           <h2 className="text-2xl font-bold text-white mb-2">No App Found</h2>
           <p className="text-gray-400">
             Sorry, no applications matched your search for <span className="text-purple-400 font-semibold">"{searchTerm}"</span>.
