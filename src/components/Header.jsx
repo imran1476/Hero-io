@@ -8,16 +8,16 @@ const Header = () => {
     { name: 'Installation', path: '/installation' },
   ];
 
-  const activeStyle = "text-white border-b-2 border-purple-500 font-semibold";
-  const defaultStyle = "text-gray-300 hover:text-white transition duration-300";
+  const activeStyle = "text-purple-800 border-b-2 border-purple-500 font-semibold text-lg font-semibold";
+  const defaultStyle = "text-black hover:text-white transition duration-300 text-md";
 
   return (
-    <header className="bg-gray-900 shadow-md">
+    <header className="bg-[#ffffff] shadow-md border border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo and Home Link */}
-        <Link to="/" className="flex items-center space-x-2 text-white text-xl font-bold">
+        <Link to="/" className="flex items-center space-x-2 text-[#632ee3] text-lg font-bold">
           {/* ধরে নিন আপনার logo.png assets ফোল্ডারে আছে */}
-          <img src="/assets/hero_logo.png" alt="HERO.IO Logo" className="h-8 w-auto" />
+          <img src="/src/assets/logo.png" alt="HERO.IO Logo" className="h-8 w-auto" />
           <span>HERO.IO</span>
         </Link>
 
@@ -36,12 +36,12 @@ const Header = () => {
 
         {/* Contribution Button */}
         <a 
-          href="আপনার-গিথাব-প্রোফাইল-লিঙ্ক" 
+          href="https://github.com/imran1476" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center space-x-2"
         >
-          Contribute
+          <img src="/src/assets/contribute.jpg" alt="" className='w-[20px] h-[20px] rounded-2xl' /> <span>Contribute</span>
         </a>
       </div>
     </header>

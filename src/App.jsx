@@ -14,11 +14,11 @@ import NotFound from './pages/NotFound';       // 404 Error Page
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900">
+    <div className="flex flex-col min-h-screen ">
       
       <Header />
       
-      <main className="flex-grow">
+      <main className="flex-grow ">
         {/* Page Navigation Loading Animation এখানে ম্যানেজ করা যেতে পারে */}
         <Routes>
           <Route path="/" element={<Home />} />

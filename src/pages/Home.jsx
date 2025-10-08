@@ -27,12 +27,12 @@ const Home = () => {
     <div className="text-white">
       
       {/* 1. Banner Section (Figma অনুযায়ী) */}
-      <section className="text-center py-20 px-4 bg-gray-900">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-extrabold mb-3 leading-tight">
-            We Build <span className="text-purple-400">Productive</span> Apps
+      <section className="text-center px-4 ">
+        <div className="max-w-4xl mx-auto mt-20">
+          <h1 className="text-5xl font-extrabold mb-3 leading-tight text-[#001931] text-center mx-auto">
+            We Build <br /> <span className="text-purple-400">Productive</span> Apps
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-400 max-w-2xl text-xl mx-auto mb-8">
             At HERO.IO, we craft innovative ideas designed to make everyday life simpler, smarter, and more exciting. 
             Our goal is to turn your ideas into digital experiences that truly make an impact.
           </p>
@@ -58,15 +58,15 @@ const Home = () => {
           {/* Main Illustration (Figma অনুযায়ী ছবি দিন) */}
           {/* এই ইমেজটি আপনার 'assets' ফোল্ডারে রাখুন এবং পথটি সঠিক করুন */}
           <img 
-            src="../assets/hero.png" 
+            src="https://i.ibb.co.com/RpTYC91p/hero.png" 
             alt="Productive Apps Illustration" 
-            className="w-full max-w-xl mx-auto rounded-xl shadow-2xl" 
+            className="w-full max-w-xl mx-auto rounded-xl shadow-2xl mb-0" 
           />
         </div>
       </section>
 
       {/* 2. States Section (Figma অনুযায়ী পার্পল ব্যাকগ্রাউন্ড) */}
-      <section className="bg-purple-600 py-12">
+      <section className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-extrabold mb-8">Trusted By Millions, Built For You</h2>
           
@@ -74,7 +74,7 @@ const Home = () => {
             {statsData.map((stat, index) => (
               <div 
                 key={index} 
-                className="bg-purple-700 p-6 rounded-xl shadow-xl transform hover:scale-[1.03] transition duration-300"
+                className="bg-purple-600 p-6 rounded-xl shadow-xl transform hover:scale-[1.03] transition duration-300"
               >
                 <p className="text-4xl font-bold mb-1">{stat.value}</p>
                 <h3 className="text-xl font-semibold mb-2">{stat.title}</h3>
@@ -87,8 +87,8 @@ const Home = () => {
 
       {/* 3. Top Apps Section (Trending Apps) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-3xl font-bold text-center mb-2">Trending Apps</h2>
-        <p className="text-center text-gray-400 mb-10">Explore All Trending Apps on the Market developed by us</p>
+        <h2 className="text-3xl text-black font-bold text-center mb-2">Trending Apps</h2>
+        <p className="text-center text-gray-400 text-lg mb-10">Explore All Trending Apps on the Market developed by us</p>
 
         {/* App Card Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
