@@ -105,7 +105,7 @@ const AllApps = () => {
         ) : (
           <div className="text-center py-16 bg-gray-800 rounded-lg mt-10">
             <img
-              src="/src/assets/App-Error.png"
+              src="https://i.ibb.co.com/fdZDT76Q/App-Error.png"
               alt=""
               className="w-[150px] h-[150px] rounded-2xl mx-auto"
             />

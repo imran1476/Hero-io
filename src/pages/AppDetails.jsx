@@ -32,6 +32,11 @@ const AppDetails = () => {
   if (!app) {
     return (
       <div className="text-center py-20    min-h-[60vh]">
+         <img
+              src="https://i.ibb.co.com/fdZDT76Q/App-Error.png"
+              alt=""
+              className="w-[150px] h-[150px] rounded-2xl mx-auto"
+            />
         {/* Figma-এর Error-App Not Found ডিজাইনটি এখানে ব্যবহার করুন */}
         <h1 className="text-4xl font-bold text-white mb-4">Error-App Not Found</h1>
         <p className="text-gray-400 mb-6">OPPS!! APP NOT FOUND</p>

@@ -15,7 +15,7 @@ const NotFound = () => {
         {/* Illustration (Figma অনুযায়ী) */}
         {/* এই ইমেজটি আপনার 'assets' ফোল্ডারে রাখুন এবং পথটি সঠিক করুন */}
         <img 
-          src="/src/assets/error-404.png" 
+          src="https://i.ibb.co.com/KcdMYb6y/error-404.png" 
           alt="Page Not Found Illustration" 
           className="w-full h-auto mb-8"
         />

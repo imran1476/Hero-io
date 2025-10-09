@@ -1,30 +1,34 @@
 // src/components/Header.jsx
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { FiMenu, FiX } from 'react-icons/fi'; // Hamburger icons
+import { FiMenu, FiX, FiHome, FiDownload, FiLayers } from 'react-icons/fi'; // Hamburger + Nav icons
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Apps', path: '/apps' },
-    { name: 'Installation', path: '/installation' },
+    { name: 'Home', path: '/', icon: <FiHome /> },
+    { name: 'Apps', path: '/apps', icon: <FiLayers /> },
+    { name: 'Installation', path: '/installation', icon: <FiDownload /> },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const activeStyle =
-    'text-purple-800 border-b-2 border-purple-500 font-semibold text-lg';
+    'text-purple-800 border-b-2 border-purple-500 font-semibold text-lg flex items-center space-x-1';
   const defaultStyle =
-    'text-black hover:text-purple-600 transition duration-300 text-md';
+    'text-black hover:text-purple-600 transition duration-300 text-md flex items-center space-x-1';
 
   return (
     <header className="bg-white shadow-md border-b border-gray-200 fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 text-purple-600 font-bold text-lg">
-          <img src="https://i.ibb.co.com/KjL0MCjT/logo.png" alt="HERO.IO Logo" className="h-8 w-auto" />
+          <img
+            src="https://i.ibb.co.com/KjL0MCjT/logo.png"
+            alt="HERO.IO Logo"
+            className="h-8 w-auto"
+          />
           <span>HERO.IO</span>
         </Link>
 
@@ -36,7 +40,8 @@ const Header = () => {
               to={link.path}
               className={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
             >
-              {link.name}
+              {link.icon}
+              <span>{link.name}</span>
             </NavLink>
           ))}
         </nav>
@@ -71,11 +76,12 @@ const Header = () => {
                 onClick={() => setIsOpen(false)} // Close menu on link click
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-purple-800 font-semibold text-lg'
-                    : 'text-gray-800 hover:text-purple-600 text-md'
+                    ? 'text-purple-800 font-semibold text-lg flex items-center space-x-2'
+                    : 'text-gray-800 hover:text-purple-600 text-md flex items-center space-x-2'
                 }
               >
-                {link.name}
+                {link.icon}
+                <span>{link.name}</span>
               </NavLink>
             ))}
 
