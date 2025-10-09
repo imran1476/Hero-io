@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,7 +5,7 @@ import AppCard from '../components/AppCard';
 import { appData } from '../data/appData';
 import { FaGooglePlay, FaApple } from 'react-icons/fa';
 
-// Statistics/State Cards Data (Figma অনুযায়ী)
+
 const statsData = [
   { title: "Total Downloads", value: "29.6M", change: "21% More Than Last Month", color: "text-green-400" },
   { title: "Total Reviews", value: "906K", change: "45% More Than Last Month", color: "text-yellow-400" },
@@ -17,19 +16,18 @@ const Home = () => {
   const navigate = useNavigate();
   const topApps = appData.slice(0, 8); 
 
-  // ✅ Updated handler: redirect to actual store link
   const handleStoreLink = (store) => {
     if (store === 'Play') {
-      window.open('https://play.google.com/store', '_blank'); // Google Play Store
+      window.open('https://play.google.com/store', '_blank'); 
     } else if (store === 'App') {
-      window.open('https://www.apple.com/app-store/', '_blank'); // Apple App Store
+      window.open('https://www.apple.com/app-store/', '_blank');
     }
   };
 
   return (
     <div className="text-white">
       
-      {/* 1. Banner Section */}
+      
       <section className="text-center px-4">
         <div className="max-w-4xl mx-auto mt-30">
           <h1 className="text-5xl font-extrabold mb-3 leading-tight text-[#001931] text-center mx-auto">
@@ -40,7 +38,7 @@ const Home = () => {
             Our goal is to turn your ideas into digital experiences that truly make an impact.
           </p>
           
-          {/* ✅ Updated Store Buttons */}
+       
           <div className="flex justify-center space-x-4 mb-12">
             <button 
               onClick={() => handleStoreLink('Play')}
@@ -66,7 +64,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. Stats Section */}
+   
       <section className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-extrabold mb-8">Trusted By Millions, Built For You</h2>
@@ -85,7 +83,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Top Apps Section */}
+     
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl text-black font-bold text-center mb-2">Trending Apps</h2>
         <p className="text-center text-gray-400 text-lg mb-10">Explore All Trending Apps on the Market developed by us</p>

@@ -1,17 +1,15 @@
-// src/pages/AllApps.jsx
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AppCard from '../components/AppCard';
 import { appData } from '../data/appData';
-import LoadingSpinner from '../components/LoadingSpinner'; // লোডিং স্পিনার
-
+import LoadingSpinner from '../components/LoadingSpinner'; 
 const AllApps = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('high-low'); // default sort
-  const [isLoading, setIsLoading] = useState(false); // লোডিং স্টেট
+  const [sortBy, setSortBy] = useState('high-low'); 
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Filtered & Sorted Apps
+  
   const filteredAndSortedApps = useMemo(() => {
     const filtered = appData.filter(app =>
       app.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -24,17 +22,17 @@ const AllApps = () => {
     return sorted;
   }, [searchTerm, sortBy]);
 
-  // Loading state effect
+  
   useEffect(() => {
     setIsLoading(true);
-    const timer = setTimeout(() => setIsLoading(false), 200); // smooth loading
+    const timer = setTimeout(() => setIsLoading(false), 200); 
     return () => clearTimeout(timer);
   }, [searchTerm, sortBy]);
 
   return (
     <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[70vh]">
       
-      {/* Title Section */}
+      
       <h1 className="text-4xl font-bold text-center text-[#001931] mt-4 mb-4">
         Our All Applications
       </h1>
@@ -42,15 +40,15 @@ const AllApps = () => {
         Explore All Apps on the Market developed by us. We code for Millions
       </p>
       
-      {/* Search, State & Sort Section */}
+      
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
         
-        {/* Total Apps Found */}
+       
         <p className="text-gray-500">
           <span className="font-bold text-lg">({filteredAndSortedApps.length})</span> Apps Found
         </p>
 
-        {/* Search Bar */}
+       
         <div className="relative w-full md:w-1/3">
           <input
             type="text"
@@ -59,7 +57,7 @@ const AllApps = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-gray-800 text-white rounded-lg py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          {/* Search Icon */}
+          
           <svg
             className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500"
             fill="none"
@@ -70,7 +68,7 @@ const AllApps = () => {
           </svg>
         </div>
         
-        {/* Sort Dropdown */}
+        
         <div className="flex items-center space-x-2">
           <label htmlFor="sort" className="text-gray-500 hidden sm:block text-lg">
             Sort By:
@@ -87,14 +85,14 @@ const AllApps = () => {
         </div>
       </div>
 
-      {/* Loading Spinner */}
+      
       {isLoading && (
         <div className="min-h-[40vh] flex items-center justify-center">
           <LoadingSpinner />
         </div>
       )}
 
-      {/* App Grid Section */}
+      
       {!isLoading && (
         filteredAndSortedApps.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">

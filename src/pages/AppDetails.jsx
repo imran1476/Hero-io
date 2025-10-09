@@ -1,4 +1,4 @@
-// src/pages/AppDetails.jsx
+
 
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -9,26 +9,23 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import useLocalStorage from '../hooks/useLocalStorage';
 import { FaDownload, FaStar, FaEye } from 'react-icons/fa';
 
-// Installed App List key in localStorage
+
 const INSTALLED_APPS_KEY = 'installed_apps';
 
 const AppDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  // id কে সংখ্যায় রূপান্তর
+
   const appId = parseInt(id); 
   
-  // ১. অ্যাপ ডেটা খুঁজে বের করা
-  const app = appData.find(a => a.id === appId);
   
-  // ২. localStorage থেকে ইনস্টল করা অ্যাপের তালিকা আনা
-  // installedApps হল অ্যাপের ID-এর একটি অ্যারে
+  const app = appData.find(a => a.id === appId);
+
   const [installedApps, setInstalledApps] = useLocalStorage(INSTALLED_APPS_KEY, []);
 
-  // ৩. অ্যাপটি ইনস্টল করা আছে কিনা চেক করা
+
   const isInstalled = installedApps.includes(appId);
 
-  // অ্যাপ না পাওয়া গেলে
   if (!app) {
     return (
       <div className="text-center py-20    min-h-[60vh]">
@@ -37,7 +34,7 @@ const AppDetails = () => {
               alt=""
               className="w-[150px] h-[150px] rounded-2xl mx-auto"
             />
-        {/* Figma-এর Error-App Not Found ডিজাইনটি এখানে ব্যবহার করুন */}
+     
         <h1 className="text-4xl font-bold text-white mb-4">Error-App Not Found</h1>
         <p className="text-gray-400 mb-6">OPPS!! APP NOT FOUND</p>
         <p className="text-gray-500">The App you are requesting is not found on our system. Please try another app.</p>
@@ -51,34 +48,34 @@ const AppDetails = () => {
     );
   }
 
-  // ৪. ইনস্টল বাটন হ্যান্ডেলার
+  
   const handleInstall = () => {
     if (!isInstalled) {
-      // localStorage-এ অ্যাপ ID যোগ করা
+      
       setInstalledApps(prev => [...prev, appId]);
       toast.success(`'${app.title}' successfully installed!`, { position: "top-center" });
     }
   };
   
-  // বার চার্টের জন্য ডেটা ফরম্যাট করা
+  
   const chartData = app.ratings.map(r => ({
     name: r.name,
     count: r.count
-  })).reverse(); // 5 star উপরে দেখানোর জন্য রিভার্স করা
+  })).reverse(); 
 
   return (
     <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 py-8 text-white">
       <ToastContainer />
       
-      {/* App Information Section */}
+      
       <div className="grid md:grid-cols-3 gap-8 mb-12 bg-gray-800 p-6 rounded-xl shadow-lg">
-        {/* Image */}
+  
         <div className="md:col-span-1 flex justify-center items-center">
-          {/* লার্জ অ্যাপ ইমেজ */}
+          
           <img src={app.image} alt={app.title} className="w-48 h-48 object-contain rounded-xl border border-gray-700 p-2" />
         </div>
         
-        {/* Details */}
+        
         <div className="md:col-span-2">
           <h1 className="text-3xl font-bold mb-1">{app.title}</h1>
           <p className="text-gray-400 mb-4">Developed by <span className="text-purple-400">{app.companyName}</span></p>
@@ -89,7 +86,7 @@ const AppDetails = () => {
             <StatPill icon={<FaEye />} value={`${Math.round(app.reviews / 1000)}K`} label="Total Reviews" />
           </div>
 
-          {/* Install Button */}
+          
           <button
             onClick={handleInstall}
             disabled={isInstalled}
@@ -104,9 +101,9 @@ const AppDetails = () => {
         </div>
       </div>
       
-      {/* --- Ratings Chart and Description --- */}
       
-      {/* App Review Chart (Recharts) */}
+      
+     
       <h2 className="text-2xl font-bold mb-4 text-center md:text-left">Ratings Breakdown</h2>
       <div className="bg-gray-800 p-6 rounded-xl shadow-lg mb-12 h-80">
         <ResponsiveContainer width="100%" height="100%">
@@ -122,13 +119,12 @@ const AppDetails = () => {
                 contentStyle={{ backgroundColor: '#1f2937', border: 'none' }}
                 formatter={(value) => [`${Math.round(value / 1000)}k reviews`, 'Count']}
             />
-            {/* বার চার্টের রং Figma অনুযায়ী */}
+            
             <Bar dataKey="count" fill="#f97316" /> 
           </BarChart>
         </ResponsiveContainer>
       </div>
 
-      {/* App Description */}
       <h2 className="text-2xl font-bold mb-4 text-center md:text-left">Description</h2>
       <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
         <p className="text-gray-300 whitespace-pre-line leading-relaxed">{app.description}</p>
@@ -138,7 +134,7 @@ const AppDetails = () => {
   );
 };
 
-// ছোট StatPill কম্পোনেন্ট
+
 const StatPill = ({ icon, value, label }) => (
     <div className="text-center">
         <div className="text-3xl text-purple-400 mb-1">{icon}</div>

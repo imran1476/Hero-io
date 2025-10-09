@@ -40,7 +40,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (1).webp',
+    image: 'https://i.ibb.co.com/FLMdbs55/demo-app-1.webp',
     title: 'Calmi: Meditation & Sleep',
     companyName: 'mindzone.app',
     id: 3,
@@ -78,7 +78,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (3).webp',
+    image: 'https://i.ibb.co.com/DPPV91rG/demo-app-3.webp',
     title: 'NotePlus: Smart Notepad',
     companyName: 'notely.app',
     id: 5,
@@ -306,7 +306,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (3).webp',
+    image: 'https://i.ibb.co.com/k634pyDm/images-10.jpg',
     title: 'SecureMe: Password Vault',
     companyName: 'cybersafe.io',
     id: 17,
@@ -363,7 +363,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (5).webp',
+    image: 'https://i.ibb.co.com/HfP4g1sF/demo-app-5.webp',
     title: 'ZenMode: Focus & Breathe',
     companyName: 'calmind.com',
     id: 20,

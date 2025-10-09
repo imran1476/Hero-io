@@ -1,21 +1,18 @@
-// src/pages/Installation.jsx
 
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { appData } from '../data/appData';
 import useLocalStorage from '../hooks/useLocalStorage'; 
-import { FaDownload, FaStar, FaTrashAlt } from 'react-icons/fa'; // UnInstall আইকন
-
-// Key for localStorage
+import { FaDownload, FaStar, FaTrashAlt } from 'react-icons/fa'; 
 const INSTALLED_APPS_KEY = 'installed_apps';
 
 const Installation = () => {
   const [installedAppIds, setInstalledAppIds] = useLocalStorage(INSTALLED_APPS_KEY, []);
-  const [sortBy, setSortBy] = useState('high-low'); // নতুন sort state
+  const [sortBy, setSortBy] = useState('high-low'); 
   const navigate = useNavigate();
 
-  // ইনস্টল করা অ্যাপের ডেটা useMemo ব্যবহার করে বের করা এবং sort করা
+ 
   const installedApps = useMemo(() => {
     const filtered = appData.filter(app => installedAppIds.includes(app.id));
 
@@ -31,7 +28,6 @@ const Installation = () => {
     return sorted;
   }, [installedAppIds, sortBy]);
 
-  // Uninstall হ্যান্ডেলার
   const handleUninstall = (appId, appTitle) => {
     setInstalledAppIds(prevIds => prevIds.filter(id => id !== appId));
     toast.info(`'${appTitle}' has been successfully uninstalled.`, { position: "top-center" });
@@ -43,7 +39,7 @@ const Installation = () => {
       <h1 className="text-4xl font-bold text-center text-[#001931] mb-2">Your Installed Apps</h1>
       <p className="text-center text-gray-400 mb-8">Explore All Trending Apps on the Market developed by us.</p>
 
-      {/* Sort Section */}
+    
       {installedApps.length > 0 && (
         <div className="flex justify-end mb-4">
           <label htmlFor="sort" className="text-gray-500 hidden sm:block text-lg mr-2">Sort By:</label>
@@ -76,7 +72,7 @@ const Installation = () => {
           </div>
         ) : (
           <div className="space-y-4">
-            {/* Installed App List */}
+            
             {installedApps.map((app) => (
               <div 
                 key={app.id} 
@@ -96,20 +92,21 @@ const Installation = () => {
                       </span>
                       <span className="flex items-center">
                         <FaStar className="text-yellow-500 mr-1" size={10} /> {app.ratingAvg}
-                      </span>
-                      <span>{app.size} MB</span>
-                    </div>
-                  </div>
-                </div>
+    </span>
+    <span>{app.size} MB</span>
+         </div>
+         </div>
+           </div>
 
-                <button
-                  onClick={() => handleUninstall(app.id, app.title)}
-                  className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 text-sm"
-                >
-                  <FaTrashAlt />
-                  <span>Uninstall</span>
-                </button>
-              </div>
+           
+ <button
+    onClick={() => handleUninstall(app.id, app.title)}
+  className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 text-sm"
+         >
+   <FaTrashAlt />
+           <span>Uninstall</span>
+        </button>
+        </div>
             ))}
           </div>
         )}

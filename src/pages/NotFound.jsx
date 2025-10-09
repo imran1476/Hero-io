@@ -1,4 +1,4 @@
-// src/pages/NotFound.jsx
+
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -7,13 +7,12 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    // Figma-এর Error-404 ডিজাইন অনুযায়ী
+    
     <div className="text-center py-10 min-h-[70vh] flex flex-col items-center justify-center">
       <div className="max-w-md mx-auto">
         <h1 className="text-4xl font-extrabold text-white mb-8">Error-404</h1>
         
-        {/* Illustration (Figma অনুযায়ী) */}
-        {/* এই ইমেজটি আপনার 'assets' ফোল্ডারে রাখুন এবং পথটি সঠিক করুন */}
+       
         <img 
           src="https://i.ibb.co.com/KcdMYb6y/error-404.png" 
           alt="Page Not Found Illustration" 
@@ -26,7 +25,7 @@ const NotFound = () => {
         </p>
 
         <button 
-          onClick={() => navigate('/')} // হোমে ফিরে যাওয়ার বাটন
+          onClick={() => navigate('/')} 
           className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300"
         >
           Go Back
