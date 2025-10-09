@@ -31,7 +31,7 @@ const Home = () => {
       
       {/* 1. Banner Section */}
       <section className="text-center px-4">
-        <div className="max-w-4xl mx-auto mt-20">
+        <div className="max-w-4xl mx-auto mt-30">
           <h1 className="text-5xl font-extrabold mb-3 leading-tight text-[#001931] text-center mx-auto">
             We Build <br /> <span className="text-purple-400">Productive</span> Apps
           </h1>
@@ -61,7 +61,7 @@ const Home = () => {
           <img 
             src="https://i.ibb.co.com/RpTYC91p/hero.png" 
             alt="Productive Apps Illustration" 
-            className="w-full max-w-xl mx-auto rounded-xl shadow-2xl mb-0" 
+            className="w-full max-w-xl  mx-auto  mb-0" 
           />
         </div>
       </section>
