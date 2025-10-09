@@ -4,7 +4,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AppCard from '../components/AppCard';
 import { appData } from '../data/appData';
-import { FaGooglePlay, FaApple, FaDownload, FaRocket, FaStar } from 'react-icons/fa';
+import { FaGooglePlay, FaApple } from 'react-icons/fa';
 
 // Statistics/State Cards Data (Figma অনুযায়ী)
 const statsData = [
@@ -15,19 +15,22 @@ const statsData = [
 
 const Home = () => {
   const navigate = useNavigate();
-  // প্রথম 8টি অ্যাপ টপ অ্যাপস হিসেবে দেখাবে
   const topApps = appData.slice(0, 8); 
 
-  // প্লে স্টোর/অ্যাপ স্টোর বাটনের জন্য ডামি হ্যান্ডলার
+  // ✅ Updated handler: redirect to actual store link
   const handleStoreLink = (store) => {
-    alert(`Redirecting to ${store} Store... (This is a placeholder)`);
+    if (store === 'Play') {
+      window.open('https://play.google.com/store', '_blank'); // Google Play Store
+    } else if (store === 'App') {
+      window.open('https://www.apple.com/app-store/', '_blank'); // Apple App Store
+    }
   };
 
   return (
     <div className="text-white">
       
-      {/* 1. Banner Section (Figma অনুযায়ী) */}
-      <section className="text-center px-4 ">
+      {/* 1. Banner Section */}
+      <section className="text-center px-4">
         <div className="max-w-4xl mx-auto mt-20">
           <h1 className="text-5xl font-extrabold mb-3 leading-tight text-[#001931] text-center mx-auto">
             We Build <br /> <span className="text-purple-400">Productive</span> Apps
@@ -37,7 +40,7 @@ const Home = () => {
             Our goal is to turn your ideas into digital experiences that truly make an impact.
           </p>
           
-          {/* Store Buttons */}
+          {/* ✅ Updated Store Buttons */}
           <div className="flex justify-center space-x-4 mb-12">
             <button 
               onClick={() => handleStoreLink('Play')}
@@ -54,9 +57,7 @@ const Home = () => {
               <span>App Store</span>
             </button>
           </div>
-          
-          {/* Main Illustration (Figma অনুযায়ী ছবি দিন) */}
-          {/* এই ইমেজটি আপনার 'assets' ফোল্ডারে রাখুন এবং পথটি সঠিক করুন */}
+
           <img 
             src="https://i.ibb.co.com/RpTYC91p/hero.png" 
             alt="Productive Apps Illustration" 
@@ -65,11 +66,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. States Section (Figma অনুযায়ী পার্পল ব্যাকগ্রাউন্ড) */}
+      {/* 2. Stats Section */}
       <section className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-extrabold mb-8">Trusted By Millions, Built For You</h2>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {statsData.map((stat, index) => (
               <div 
@@ -85,19 +85,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Top Apps Section (Trending Apps) */}
+      {/* 3. Top Apps Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl text-black font-bold text-center mb-2">Trending Apps</h2>
         <p className="text-center text-gray-400 text-lg mb-10">Explore All Trending Apps on the Market developed by us</p>
 
-        {/* App Card Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {topApps.map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
         </div>
-        
-        {/* Show All Button */}
+
         <div className="text-center mt-10">
           <button 
             onClick={() => navigate('/apps')}

@@ -78,8 +78,8 @@ const AppDetails = () => {
           <h1 className="text-3xl font-bold mb-1">{app.title}</h1>
           <p className="text-gray-400 mb-4">Developed by <span className="text-purple-400">{app.companyName}</span></p>
           
-          <div className="flex space-x-6 mb-6">
-            <StatPill icon={<FaDownload />} value={`${Math.round(app.downloads / 100000) / 10}M`} label="Downloads" />
+          <div className="flex  space-x-6 mb-6">
+            <StatPill  icon={<FaDownload />} value={`${Math.round(app.downloads / 100000) / 10}M`} label="Downloads" />
             <StatPill icon={<FaStar />} value={app.ratingAvg} label="Average Rating" />
             <StatPill icon={<FaEye />} value={`${Math.round(app.reviews / 1000)}K`} label="Total Reviews" />
           </div>
