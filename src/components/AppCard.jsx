@@ -14,7 +14,7 @@ const AppCard = ({ app }) => {
           <img 
             src={app.image} 
             alt={`${app.title} logo`} 
-            className="h-full w-full object-contain p-2" 
+            className="h-full w-full   p-2" 
             onError={(e) => { e.target.style.display = 'none'; }} // ছবি লোড না হলে হাইড করে দেবে
           />
         </div>

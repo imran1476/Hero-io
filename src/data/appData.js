@@ -2,7 +2,7 @@
 
 export const appData = [
   {
-    image: '/src/assets/demo-app (2).webp',
+    image: 'https://i.ibb.co.com/jPxZ23JY/demo-app-4.webp',
     title: 'Forest: Focus For Productivity',
     companyName: 'seekrtech.com',
     id: 1,
@@ -21,7 +21,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (5).webp',
+    image: 'https://i.ibb.co.com/v6YnXyHJ/demo-app-2.webp',
     title: 'SmPlan: ToDo List With Reminder',
     companyName: 'productive.io',
     id: 2,
@@ -59,7 +59,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (2).webp',
+    image: 'https://i.ibb.co.com/mfbWqMN/demo-app-6.webp',
     title: 'FitTrack: Daily Fitness Tracker',
     companyName: 'fitzone.io',
     id: 4,
@@ -97,7 +97,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (4).webp',
+    image: 'https://i.ibb.co.com/tp9J0Zxb/66a45c5a570c9.webp',
     title: 'MusicWave: Stream & Discover',
     companyName: 'audiovibe.co',
     id: 6,
@@ -116,7 +116,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (5).webp',
+    image: 'https://i.ibb.co.com/5gnQ0xLF/images-2.jpg',
     title: 'Lango: Learn Languages',
     companyName: 'eduverse.ai',
     id: 7,
@@ -135,7 +135,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (6).webp',
+    image: 'https://i.ibb.co.com/prWcXMy0/980-1.webp',
     title: 'MealFit: Calorie Counter',
     companyName: 'fitly.com',
     id: 8,
@@ -154,7 +154,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (1).webp',
+    image: 'https://i.ibb.co.com/DDbNd0CN/images-3.jpg',
     title: 'Travelo: Explore The World',
     companyName: 'globetrek.app',
     id: 9,
@@ -173,7 +173,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (2).webp',
+    image: 'https://i.ibb.co.com/yFt4VVJW/images-4.jpg',
     title: 'FocusMe: Distraction Blocker',
     companyName: 'stayzen.io',
     id: 10,
@@ -192,7 +192,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (3).webp',
+    image: 'https://i.ibb.co.com/8LbSzrQm/personal-finance.jpg',
     title: 'FinTrack: Personal Finance',
     companyName: 'smartbudget.io',
     id: 11,
@@ -211,7 +211,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (5).webp',
+    image: 'https://i.ibb.co.com/tPXWz6WH/images-5.jpg',
     title: 'ReadIt: eBook Library',
     companyName: 'bookverse.net',
     id: 12,
@@ -230,7 +230,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (4).webp',
+    image: 'https://i.ibb.co.com/HfWB3mvW/images-6.jpg',
     title: 'Weatherly: Real-Time Forecast',
     companyName: 'skydata.ai',
     id: 13,
@@ -249,7 +249,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (4).webp',
+    image: 'https://i.ibb.co.com/r2y2CY3V/Untitled-1200-x-800-px-1.jpg',
     title: 'TuneLy: Music Studio',
     companyName: 'soundcraft.io',
     id: 14,
@@ -268,7 +268,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (6).webp',
+    image: 'https://i.ibb.co.com/4RP2kLYY/images-7.jpg',
     title: 'PetCare: Animal Health Tracker',
     companyName: 'pawhub.app',
     id: 15,
@@ -287,7 +287,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (2).webp',
+    image: 'https://i.ibb.co.com/VcVvRhvK/unnamed.png',
     title: 'MindMapr: Visual Thinking',
     companyName: 'creativeflow.co',
     id: 16,
@@ -325,7 +325,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (4).webp',
+    image: 'https://i.ibb.co.com/0R5XmZLy/images-9.jpg',
     title: 'Cookly: Recipe Finder',
     companyName: 'foodverse.ai',
     id: 18,
@@ -344,7 +344,7 @@ export const appData = [
     ],
   },
   {
-    image: '/src/assets/demo-app (1).webp',
+    image: 'https://i.ibb.co.com/DffDQc2D/images-8.jpg',
     title: 'Timely: Time Management',
     companyName: 'flowtask.app',
     id: 19,

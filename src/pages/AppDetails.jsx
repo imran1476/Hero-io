@@ -31,7 +31,7 @@ const AppDetails = () => {
   // অ্যাপ না পাওয়া গেলে
   if (!app) {
     return (
-      <div className="text-center py-20 min-h-[60vh]">
+      <div className="text-center py-20    min-h-[60vh]">
         {/* Figma-এর Error-App Not Found ডিজাইনটি এখানে ব্যবহার করুন */}
         <h1 className="text-4xl font-bold text-white mb-4">Error-App Not Found</h1>
         <p className="text-gray-400 mb-6">OPPS!! APP NOT FOUND</p>
@@ -62,7 +62,7 @@ const AppDetails = () => {
   })).reverse(); // 5 star উপরে দেখানোর জন্য রিভার্স করা
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-white">
+    <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 py-8 text-white">
       <ToastContainer />
       
       {/* App Information Section */}

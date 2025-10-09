@@ -24,7 +24,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 text-purple-600 font-bold text-lg">
-          <img src="/src/assets/logo.png" alt="HERO.IO Logo" className="h-8 w-auto" />
+          <img src="https://i.ibb.co.com/KjL0MCjT/logo.png" alt="HERO.IO Logo" className="h-8 w-auto" />
           <span>HERO.IO</span>
         </Link>
 
@@ -46,7 +46,7 @@ const Header = () => {
           href="https://github.com/imran1476"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:flex bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 items-center space-x-2"
+          className="hidden md:flex bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] hover:to-[#632EE3] text-white font-bold py-2 px-4 rounded-lg transition duration-300 items-center space-x-2"
         >
           <img src="/src/assets/fi_2111432.png" alt="" className="w-5 h-5 rounded-full" />
           <span>Contribute</span>
