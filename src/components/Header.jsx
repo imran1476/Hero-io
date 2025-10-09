@@ -53,7 +53,7 @@ const Header = () => {
       rel="noopener noreferrer"
    className="hidden md:flex bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] hover:to-[#632EE3] text-white font-bold py-2 px-4 rounded-lg transition duration-300 items-center space-x-2"
         >
-    <img src="/src/assets/fi_2111432.png" alt="" className="w-5 h-5 rounded-full" />
+    <img src="https://i.ibb.co.com/5WnmXS9f/fi-2111432.png" alt="" className="w-5 h-5 rounded-full" />
     <span>Contribute</span>
      </a>
 
