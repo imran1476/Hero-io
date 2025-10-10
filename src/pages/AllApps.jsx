@@ -68,21 +68,28 @@ const AllApps = () => {
           </svg>
         </div>
         
-        
-        <div className="flex items-center space-x-2">
-          <label htmlFor="sort" className="text-gray-500 hidden sm:block text-lg">
-            Sort By:
-          </label>
-          <select
-            id="sort"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="bg-gray-800 text-white rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          >
-            <option value="high-low">Downloads: High-Low</option>
-            <option value="low-high">Downloads: Low-High</option>
-          </select>
-        </div>
+       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 w-full sm:w-auto">
+   
+  <label
+    htmlFor="sort"
+    className="text-gray-500 text-sm sm:text-base mb-1 sm:mb-0 sm:block text-center sm:text-left"
+  >
+    Sort By:
+  </label>
+
+  
+  <select
+    id="sort"
+    value={sortBy}
+    onChange={(e) => setSortBy(e.target.value)}
+    className="bg-gray-800 text-white rounded-md py-1.5 px-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500 w-[160px] sm:w-auto max-w-[200px] overflow-hidden truncate"
+  >
+    <option value="high-low">Downloads: High-Low</option>
+    <option value="low-high">Downloads: Low-High</option>
+  </select>
+</div>
+
+
       </div>
 
       
